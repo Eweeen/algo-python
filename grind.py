@@ -154,7 +154,17 @@ def matrixAddition(a, b):
 # attempts est un tableau de lignes de chiffres, représentant toutes les combinaisons essayées par le joueur
 # La fonction retourne vrai si la ligne answer se trouve dans attempts et faux sinon
 def mastermind(answer: list[int], attempts: list[int]) -> bool:
-  return None
+  isGood = False
+
+  for i in range(len(attempts)):
+    for x in range(len(answer)):
+      if answer[x] != attempts[i][x]:
+        isGood = False
+        break
+      isGood = True
+    if isGood: return True
+
+  return isGood
 
 # ================================================================
 #                             Jour 9
