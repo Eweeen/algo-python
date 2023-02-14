@@ -40,12 +40,13 @@ def areBetween5And10(a: int, b: int) -> bool:
 # Si la somme des paramètres est paire, retourner le carré de a.
 # Sinon, retourner le cube de b.
 def parityComputing(a: int, b: int) -> int:
-  return None
+  return pow(a, 2) if (a + b) % 2 == 0 else pow(b, 3)
 
 # Ajouter n fois la lettre letter au mot word
 # Retourner la chaîne de caractères résultante
 def addLetters(word: str, letter: str, n: int) -> str:
-  return None
+  for i in range(n): word += letter
+  return word
 
 # ================================================================
 #                             Jour 4
