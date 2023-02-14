@@ -98,12 +98,19 @@ def balanceParams(a: int, b: int) -> int:
 # Retourne vrai si le nombre b se trouve dans le tableau a
 # Retourne faux sinon
 def isNumberInArray(a: list[int], b: int) -> bool:
-  return None
+  return True if b in a else False
 
 # Retourne vrai si la somme des nombres pairs est strictement supérieure
 # à la somme des nombres impaires contenus dans le tableau
 def biggerTotalOfEvenNumbers(a: list[int]) -> bool:
-  return None
+  paire = 0
+  impaire = 0
+
+  for i in range(len(a)):
+    if a[i] % 2 == 0: paire += a[i]
+    else: impaire += a[i]
+
+  return paire > impaire
 
 # ================================================================
 #                             Jour 7
