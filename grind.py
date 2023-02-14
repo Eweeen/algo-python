@@ -190,4 +190,18 @@ def digitalRoot(a: int) -> int:
 # Retourne un tableau contenant les sommes des différentes chaînes contenues dans le tableau
 # (exemple : [1, 2, 7, 4, 5, 6] retourne [3, 15] car il y a deux chaînes : 1-2 et 4-5-6)
 def chainSums(a: list[int]) -> list[int]:
-  return None
+  if len(a) == 0: return []
+  
+  arr = []
+  somme = 0
+
+  for i in range(1, len(a)):
+    if a[i - 1] == a[i] - 1:
+      if somme == 0: somme += a[i - 1]
+      somme += a[i]
+      continue
+    if somme != 0: arr.append(somme)
+    somme = 0
+  if somme != 0: arr.append(somme)
+
+  return arr
