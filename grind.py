@@ -4,21 +4,21 @@
 
 # Retourne la valeur true
 def returnTrue() -> bool:
-  return None
+  return True
 
 # Retourne le paramètre donné en entrée
 def returnParam(param: int) -> int:
-  return None
+  return param
 
 # Retourne vrai si param est strictement supérieur à 5
 # Retourne faux sinon
 def isBiggerThan5(param: int) -> bool:
-  return None
+  return True if param > 5 else False
 
 # Retourne vrai si param est faux
 # Retourne faux si param est vrai
 def invertBoolean(param: bool) -> bool:
-  return None
+  return not param
 
 # ================================================================
 #                             Jour 2
