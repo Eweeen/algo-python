@@ -75,12 +75,21 @@ def sumArray(a: list[int]) -> int:
 
 # Retourne le plus grand nombre contenu dans le tableau
 def maxArray(a: list[int]) -> int:
-  return None
+  max = a[0]
+
+  for i in range(1, len(a)):
+    if a[i] > max: max = a[i]
+
+  return max
 
 # Diviser b par 2 et ajouter 5 à a tant que a est inférieur à b
 # Une fois que a est strictement supérieur à b, retourner la somme de a et b.
 def balanceParams(a: int, b: int) -> int:
-  return None
+  while a <= b:
+    b = b / 2
+    a = a + 5
+
+  return a + b
 
 # ================================================================
 #                             Jour 6
