@@ -26,12 +26,12 @@ def invertBoolean(param: bool) -> bool:
 
 # Retourne la somme des paramètres a b et c, le tout multiplié par 5
 def sumTimes5(a: int, b: int, c: int) -> int:
-  return None
+  return (a + b + c) * 5
 
 # Retourne vrai si a ET b sont strictement supérieurs à 5 et strictement inférieurs à 10
 # Retourne faux sinon
 def areBetween5And10(a: int, b: int) -> bool:
-  return None
+  return True if 10 > a > 5 and 10 > b > 5 else False
 
 # ================================================================
 #                             Jour 3
