@@ -124,11 +124,26 @@ def biggerTotalOfEvenNumbers(a: list[int]) -> bool:
 # - Sa largeur
 # Il y a collision si ces deux rectangles se touchent ou se superposent
 def isCollisionDetected(rectA: list[int], rectB: list[int]) -> bool:
-  return None
+  coordA = [rectA[0], rectA[1], rectA[0] + rectA[2], rectA[1] + rectA[3]]
+  coordB = [rectB[0], rectB[1], rectB[0] + rectB[2], rectB[1] + rectB[3]]
+
+  if coordA[0] <= coordB[0] <= coordA[2] and coordA[1] <= coordB[1] <= coordA[3]: return True
+  if coordB[0] <= coordA[0] <= coordB[2] and coordB[1] <= coordA[1] <= coordB[3]: return True
+
+  return False
 
 # Retourne la somme des matrices a et b (toujours de mêmes dimensions)
 def matrixAddition(a, b):
-  return None
+  if len(a) == 0 or len(b) == 0: return []
+  
+  somme = []
+
+  for i in range(len(a)):
+    somme.append([])
+    for x in range(len(a[i])):
+      somme[i].append(a[i][x] + b[i][x])
+
+  return somme
 
 # ================================================================
 #                             Jour 8
