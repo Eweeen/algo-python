@@ -1,3 +1,5 @@
+import math
+
 # ================================================================
 #                             Jour 1
 # ================================================================
@@ -56,11 +58,16 @@ def addLetters(word: str, letter: str, n: int) -> str:
 # (exemple: 5120 -> 1)
 # Retourne 0 si le nombre est inférieur à 100
 def getHundreds(a: int) -> int:
-  return None
+  return math.floor((a - (math.floor(a/1000) * 1000)) / 100)
 
 # Retourne la somme de tous les éléments du tableau
 def sumArray(a: list[int]) -> int:
-  return None
+  somme = 0
+
+  for i in range(len(a)):
+    somme += a[i]
+
+  return somme
 
 # ================================================================
 #                             Jour 5
