@@ -174,7 +174,13 @@ def mastermind(answer: list[int], attempts: list[int]) -> bool:
 # récursivement jusqu'à ce qu'ils ne donnent qu'un seul chiffre
 # (exemple : 598 -> 5+9+8 = 22 -> 2+2 = 4)
 def digitalRoot(a: int) -> int:
-  return None
+  if a < 10: return a
+
+  res = sumArray(list(map(int, str(a))))
+
+  if res > 9: return digitalRoot(res)
+  
+  return res
 
 # ================================================================
 #                             Jour 10
